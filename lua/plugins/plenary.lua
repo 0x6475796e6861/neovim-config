@@ -1,6 +1,4 @@
 -- plenary.nvim
 -- Source: https://github.com/nvim-lua/plenary.nvim
-return {{
-  "nvim-lua/plenary.nvim", tag = "v0.1.4",
-  opt = {}
-}}
+-- Note: The release management of this plugin is pretty stagnant, so let's use the latest commit for now. 
+return {{ "nvim-lua/plenary.nvim", opt = {} }}
