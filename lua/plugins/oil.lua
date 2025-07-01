@@ -7,20 +7,20 @@ return {{
   lazy = false,
   ---@module 'oil'
   ---@type oil.SetupOpts
-  opts = {
-    win_options = {
-      -- For more details on `get_oil_winbar()`, see ./config.lua
-      -- winbar = "%!v:lua.get_oil_winbar()"
-    },
-    keymaps = {
-      -- ["gd"] = { desc = "Toggle file detail view", callback = toggle_detail_view },
-      ["<C-p>"] = { "actions.preview", opts = { split = "botright" } },
-      ["<C-s>"] = { "actions.select", opts = { vertical = true, split = "botright" } },
-      ["<C-h>"] = { "actions.select", opts = { horizontal = true, split = "botright" } },
-    },
-    view_options = { show_hidden = true }
-  },
   config = function(opts)
+    local opts = {
+      win_options = {
+        -- For more details on `get_oil_winbar()`, see ./config.lua
+        -- winbar = "%!v:lua.get_oil_winbar()"
+      },
+      keymaps = {
+        -- ["gd"] = { desc = "Toggle file detail view", callback = toggle_detail_view },
+        ["<C-p>"] = { "actions.preview", opts = { split = "botright" } },
+        ["<C-s>"] = { "actions.select", opts = { vertical = true, split = "botright" } },
+        ["<C-h>"] = { "actions.select", opts = { horizontal = true, split = "botright" } },
+      },
+      view_options = { show_hidden = true }
+    }
     require("oil").setup(opts)
     require("keymaps.oil")
   end
