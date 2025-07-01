@@ -4,7 +4,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter", tag = "v0.10.0",
     build = ":TSUpdate",
-    opt = {
+    opts = {
       highlight = {
           enable = true,
           -- Disable highlighting for large files 
@@ -29,6 +29,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context", tag = "v1.0.0",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opt = {}
+    opts = {}
   }
 }
